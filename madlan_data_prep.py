@@ -163,7 +163,7 @@ def train_and_evaluate_model(data):
     # Omit unnecessary columns
     data = data.drop(columns=['type', 'Street', 'number_in_street', 'city_area',
                               'num_of_images', 'floor_out_of', 'entranceDate ',
-                              'condition ', 'furniture ', 'publishedDays ', 'description ', 'Unnamed: 23'])
+                              'condition ', 'furniture ', 'publishedDays ', 'description ', 'Unnamed: 23', 'current_entrance_date'])
     
     # Calculate the average floor and total_floors as integers
     average_floor = data['floor'].mean().astype(float)
@@ -174,8 +174,8 @@ def train_and_evaluate_model(data):
     data['total_floors'].fillna(average_total_floors, inplace=True)    
     
     # Convert 'current_entrance_date' column to numeric
-    label_encoder = LabelEncoder()
-    data['current_entrance_date'] = label_encoder.fit_transform(data['current_entrance_date'].astype(str))
+    #label_encoder = LabelEncoder()
+    #data['current_entrance_date'] = label_encoder.fit_transform(data['current_entrance_date'].astype(str))
 
     # Perform one-hot encoding on 'City' column
     data = pd.get_dummies(data, columns=['City'], prefix='City')
