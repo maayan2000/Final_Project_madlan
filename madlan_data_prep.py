@@ -20,6 +20,10 @@ import matplotlib.pyplot as plt
 import numpy as np
 import re
 from datetime import datetime
+from sklearn.preprocessing import LabelEncoder
+from sklearn.linear_model import ElasticNetCV
+from sklearn.metrics import mean_squared_error
+from sklearn.model_selection import cross_val_score
 
 def prepare_data(filename):
     data = pd.read_csv(filename)
