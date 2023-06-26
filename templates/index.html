@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Property Price Prediction</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Property Price Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="room_number">Number of Rooms:</label>
+        <input type="number" id="room_number" name="room_number" required>
+
+        <label for="area">Area:</label>
+        <input type="number" id="area" name="area" required>
+
+        <label for="has_elevator">Has Elevator:</label>
+        <select id="has_elevator" name="has_elevator" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select>
+
+        <label for="has_parking">Has Parking:</label>
+        <select id="has_parking" name="has_parking" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select>
+
+        <label for="has_bars">Has Bars:</label>
+        <select id="has_bars" name="has_bars" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select>
+
+        <label for="has_storage">Has Storage:</label>
+        <select id="has_storage" name="has_storage" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select>
+
+        <label for="has_air_condition">Has Air Condition:</label>
+        <select id="has_air_condition" name="has_air_condition" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select>
+
+        <label for="has_balcony">Has Balcony:</label>
+        <select id="has_balcony" name="has_balcony" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select>
+
+        <label for="has_mamad">Has Mamad:</label>
+        <select id="has_mamad" name="has_mamad" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select>
+
+        <label for="handicap_friendly">Handicap Friendly:</label>
+        <select id="handicap_friendly" name="handicap_friendly" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select>
+
+        <label for="floor">Floor:</label>
+        <input type="number" id="floor" name="floor" required>
+
+        <label for="total_floors">Total Floors:</label>
+        <input type="number" id="total_floors" name="total_floors" required>
+
+        <label for="current_entrance_date">Current Entrance Date:</label>
+        <input type="date" id="current_entrance_date" name="current_entrance_date">
+
+        <label for="city">City:</label>
+        <select id="city" name="city" required>
+            <option value="נהריה">נהריה</option>
+            <option value="שוהם">שוהם</option>
+            <option value="אילת">אילת</option>
+            <option value="אריאל">אריאל</option>
+            <option value="באר שבע">באר שבע</option>
+            <option value="בית שאן">בית שאן</option>
+            <option value="בת ים">בת ים</option>
+            <option value="גבעת שמואל">גבעת שמואל</option>
+            <option value="דימונה">דימונה</option>
+            <option value="הוד השרון">הוד השרון</option>
+            <option value="הרצליה">הרצליה</option>
+            <option value="זכרון יעקב">זכרון יעקב</option>
+            <option value="חולון">חולון</option>
+            <option value="חיפה">חיפה</option>
+            <option value="יהוד מונוסון">יהוד מונוסון</option>
+            <option value="ירושלים">ירושלים</option>
+            <option value="כפר סבא">כפר סבא</option>
+            <option value="מודיעין מכבים רעות">מודיעין מכבים רעות</option>
+            <option value="נהריה">נהריה</option>
+            <option value="נהרייה">נהרייה</option>
+            <option value="נוף הגליל">נוף הגליל</option>
+            <option value="נס ציונה">נס ציונה</option>
+            <option value="נתניה">נתניה</option>
+            <option value="פתח תקווה">פתח תקווה</option>
+            <option value="צפת">צפת</option>
+            <option value="קרית ביאליק">קרית ביאליק</option>
+            <option value="ראשון לציון">ראשון לציון</option>
+            <option value="רחובות">רחובות</option>
+            <option value="רמת גן">רמת גן</option>
+            <option value="רעננה">רעננה</option>
+            <option value="שוהם">שוהם</option>
+            <option value="תל אביב">תל אביב</option>
+        </select>
+
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
